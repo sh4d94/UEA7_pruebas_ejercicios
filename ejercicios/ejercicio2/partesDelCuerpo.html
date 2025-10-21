@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu cuerpo en JSON</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <h1>Tu cuerpo en JSON</h1>
+    <p>Debe:</p>
+
+    <div>
+        <p id="mang"></p>
+    </div>
+
+    <script>
+        // Fetch is a method that allows us to get external files by searching for them.
+        fetch('partesDelCuerpo.json')
+        // With "then" we can promise the response
+            .then( response => response.json())
+        // With "then" we can handle the JSON data
+            .then(json => {
+                document.getElementById("mang").innerHTML = json.acciones[1] +" " + json.partesDelCuerpo[0] + " " + json.lado[0];
+                //console.log(json.partesDelCuerpo[0]); // "mano"
+                //console.log(json.acciones[1]); // "estirar"
+                //console.log(json.lado[0]); // "izquierdo"
+            })
+    </script>
+
+</body>
+</html>

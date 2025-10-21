@@ -1,0 +1,5 @@
+[
+  {"extremidades":["brazo", "pierna", "mano"], "tamano": ["largo", "mediano", "corto"]},
+  {"cuerpo": ["hectomorfo ", "mesomorfo ", "endomorfo "], "posicion":["parado", "sentado", "acostado"]},
+  {"PC": "Tak-E", "estado": "muerto"}
+]
