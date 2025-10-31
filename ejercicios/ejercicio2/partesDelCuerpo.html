@@ -9,7 +9,7 @@
 <body>
  
     <h1>Tu cuerpo en JSON</h1>
-    <p>Debe:</p>
+    <h2>Debe:</h2>
 
     <div>
         <p id="mang"></p>
@@ -23,9 +23,6 @@
         // With "then" we can handle the JSON data
             .then(json => {
                 document.getElementById("mang").innerHTML = json.acciones[1] +" " + json.partesDelCuerpo[0] + " " + json.lado[0];
-                //console.log(json.partesDelCuerpo[0]); // "mano"
-                //console.log(json.acciones[1]); // "estirar"
-                //console.log(json.lado[0]); // "izquierdo"
             })
     </script>
 
