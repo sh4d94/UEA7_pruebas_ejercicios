@@ -1,0 +1,39 @@
+{
+    "Felicidad": [
+        "Hoy ha sido un gran día", 
+        "Todo me fue excelente", 
+        "Quiero premiarme por\nmi gran desempeño", 
+        "Estoy muy orgulloso de mí mismo",
+        "He logrado todo lo que me propuse", 
+        "Me siento pleno y satisfecho", 
+        "Estoy lleno de energía positiva", 
+        "La vida es maravillosa", 
+        "Estoy agradecido por\ntodo lo que tengo", 
+        "Me siento en paz conmigo mismo"
+    ],
+
+    "Neutral": [
+        "No tengo gran cosa por decir", 
+        "El día estuvo tranquilo", 
+        "Terminé todo. Ahora\nno sé qué hacer", 
+        "No tengo emociones fuertes", 
+        "Estoy bien, pero podría estar mejor", 
+        "El tiempo pasa lentamente", 
+        "No hay mucho que destacar", 
+        "Me siento indiferente", 
+        "No hay altibajos", 
+        "Todo sigue igual"
+    ],
+    
+    "Tristeza": [
+        "No puedo más", 
+        "Todo es inútil", 
+        "Quiero desaparecer", 
+        "Estoy cansado de luchar",
+        "Nada tiene sentido", 
+        "No encuentro mi lugar", 
+        "Siento que no\npertenezco aquí", 
+        "Estoy agotado", 
+        "No veo un futuro para mí", 
+        "Solo quiero paz"]
+}

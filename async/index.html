@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</head>
+<body>
+
+    <h1> FRASES FELICES </h1>
+    <p id="fraseFeliz"></p>
+    <br>
+    <div id="imageContainer"></div>
+    <br>
+    <input type="text" id="apodo">
+    <button type="button" onclick="registroUsuario(document.getElementById('apodo').value)">Ingresar</button>
+    <br>
+    <div id="soundContainer"></div>
+
+    <script>
+        const namuClient = supabase.createClient('https://geeatbnsxnjicdfdcjvr.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlZWF0Ym5zeG5qaWNkZmRjanZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4OTkzNTUsImV4cCI6MjA3NzQ3NTM1NX0.ja-NZq9Ql01n5gF_IN-vl8yCxbELUzLt2zXr1kU77Ok', {
+            db: {schema:"public"}
+        });
+
+        // Este código sirve para llamar a una frase de la tabla
+        (async () => { // esta es una función anonima
+            // Este código sirve para llamar a una frase de la tabla en supabase
+            const response = await namuClient.from("prueba2").select("felizzzz")
+            console.log(response.data[0].felizzzz)
+            
+            document.getElementById("fraseFeliz").innerHTML = response.data[9].felizzzz;
+
+            // Este código sirve para llamar a una imagen del storage en supabase
+            const response2 = await namuClient.storage.from("pruebaStorage1").getPublicUrl("namStorage.jpg")
+            console.log(response2.data.publicUrl)
+
+            const imgElement = document.createElement('img')
+                imgElement.src = response2.data.publicUrl
+                imgElement.width = 400
+                document.getElementById('imageContainer').appendChild(imgElement)
+        })()
+
+        async function registroUsuario(nickname) {
+            const nombreUsuario = await namuClient.from('pruebaRegistros').insert([
+                {usuarios: nickname},
+            ]).select()
+        }
+        registroUsuario();
+        
+        async function cargarSonido(sonido) {
+            const response3 = await namuClient.storage.from("pruebaStorage1").getPublicUrl("akivaenMP3")
+            console.log(response3.data.publicUrl)
+
+            const sndElement = document.createElement('audio')
+                sndElement.src = response3.data.publicUrl
+                sndElement.controls = true
+                document.getElementById('imageContainer').appendChild(imgElement)
+        }
+        registroUsuario();
+
+    </script>
+</body>
+</html>

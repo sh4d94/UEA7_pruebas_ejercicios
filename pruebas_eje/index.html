@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me borro, luego existo</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon/me_borro.ico">
+    <link rel="stylesheet" href="styleIndex.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <!-- LOADER -->
+    <div id="loader">
+        <div class="glitch">Cargando...</div>
+    </div>
+
+    <!-- EFECTO MÁQUINA DE ESCRIBIR -->
+    <div id="typewriter-screen">
+        <div id="typewriter-text"></div><span id="typewriter-cursor">█</span>
+    </div>
+
+    <!-- REGISTRO -->
+    <div class="container">
+        <h1>meBorroLuegoExisto.com</h1>
+        <h2>¡Te doy la bienvenida al foro, colega!</h2>
+        <h4>Crea un apodo para que nos conozcamos</h4>
+        <input type="text" id="apodo">
+        <button class="btn" type="button" onclick="registroUsuario(document.getElementById('apodo').value); window.location.href='inForoPrincipal.html';">Ingresar</button>
+    </div>
+
+    <script src="scriptIndex.js"></script>
+</body>
+</html>
