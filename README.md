@@ -26,7 +26,7 @@ La carpeta **pruebas** funciona como un espacio de experimentación, donde se re
 Finalmente, esta organización busca mantener el repositorio como un recurso claro, accesible y útil para revisiones posteriores. Además, funciona como una copia de seguridad del código fuente o principal tanto del eje integrador como de los ejercicios para no perder los avances obtenidos.
 
 
-## Experiencia personal de crear y gestionar tu repositorio.
+## Experiencia personal de crear y gestionar mi repositorio.
 
 La **experiencia** de crear y gestionar un repositorio ha sido un ejercicio significativo en términos de **organización**, **disciplina** técnica y **comprensión** del flujo de trabajo digital.
 
