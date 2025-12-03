@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOP 10: El Cuarteto de Nos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <!--
+        Oa, profe. Soy Hann.
+        Hoy va a conocer mi fanatismo por El Cuarteto de Nos,
+        una banda que siempre recomiendo escuchar con cuidado,
+        principalmente, porque sus canciones viejas tienen
+        letras medio raras debido al humor ácido y la sátira
+        que usaban. Pero fuera de eso, las canciones recientes 
+        tienen cortes diferentes. Yo diría que son temas un poco 
+        más sociales e introspectivos. Además, ahora son una
+        banda de rock y algunas de sus variantes.
+        Escúchelos, si gusta:DD.
+
+        P.D: toda la información es fruto de mi hiperfijación añejada
+        durante 8 años (y contando) con la banda xd.
+        P.D.2: los colores de la página son una referencia a la
+        portada de dos de sus sencillos más recientes "Cara de
+        nada" y "El perro de Alcibíades".
+     -->
+    
+        <h1 style="color: rgb(255, 0, 0);"> Mi TOP 10 de canciones de El Cuarteto de Nos </h1>
+        <h5 style="color: rgb(255, 0, 0);"><i> Por Hann "sh4d" Ortega </i></h5>
+
+        <p style="color: rgb(255, 255, 255);">
+            No se me ocurre mejor banda latinoamericana para hacer un TOP de canciones que El Cuarteto de Nos. Son un grupo de cinco viejitos uruguayos bien locos que hacen música desde 1984. Es difícil decir qué género emplean, ya que son cambiantes; es decir, siempre tienen un montón de géneros en cada álbum que sacan (a Roberto Musso, vocalista y guitarrista rítmico, le gusta experimentar en sus composiciones). Sin embargo, creo que lo que más usan actualmente son la sátira en sus letras y el <i>rock</i> en sus vertientes de <i>rap</i>, <i>pop</i> y alternativo.
+            <br>
+            <br>
+            Creo que por eso me gusta tanto su música desde 2017. Cada vez es diferente a la anterior. No hay monotonía, realmente. Y sus letras, aunque algunas son algo... peculiares o muy random, recientemente tienen cortes más interesantes. Esto empezó desde su álbum <i>"Bipolar"</i> (2009). Además, me encata la forma en la que Roberto Musso compone sus letras, ya que en una entrevista mencionó que lee mucho sobre cierto tema de su interés, define la persona en la que escribirá la canción y después empieza las pruebas.
+            <br>
+            <br>
+            Para mí, su música es una froma de transmitir la consciencia social que Roberto Musso ha construido a lo largo de su vida en la contemporaneidad, logrando conectar con numerosas personas que tienen brechas generacionales muy marcadas. Esto último lo presencié cuando fui al concierto que dieron en el Teatro Morelos, en Toluca, Edo.Méx., el 05 de abril de 2024. Me pareció un aspecto importante a remarcar, puesto que logré entablar conversaciones y hasta una amistad momentánea con varias personas que me rebasaban por años, únicamente por el fanatismo y saber las letras de memoria.
+            <br>
+            <br>
+            Ahora bien, después de tres párrafos en los que despilfarro un poco de mi hiperfijación, le presento mi top 10 mejores canciones de El Cuarteto de Nos. Están tanto el nombre de la canción como el nombre del álbum del que proviene y su año de publicación.
+        </p>
+        <br>
+        <div class="top">
+            <p id="top1"></p>
+            <p id="top2"></p>
+            <p id="top3"></p>
+            <p id="top4"></p>
+            <p id="top5"></p>
+            <p id="top6"></p>
+            <p id="top7"></p>
+            <p id="top8"></p>
+            <p id="top9"></p>
+            <p id="top10"></p>
+        </div>
+
+        <div class="nomC">
+            <p id="nomC1"></p>
+            <p id="nomC2"></p>
+            <p id="nomC3"></p>
+            <p id="nomC4"></p>
+            <p id="nomC5"></p>
+            <p id="nomC6"></p>
+            <p id="nomC7"></p>
+            <p id="nomC8"></p>
+            <p id="nomC9"></p>
+            <p id="nomC10"></p>
+        </div>
+
+    <script>
+        const namuClient = supabase.createClient('https://geeatbnsxnjicdfdcjvr.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdlZWF0Ym5zeG5qaWNkZmRjanZyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjE4OTkzNTUsImV4cCI6MjA3NzQ3NTM1NX0.ja-NZq9Ql01n5gF_IN-vl8yCxbELUzLt2zXr1kU77Ok', {
+            db: {schema:"public"}
+        });
+
+        // Este código sirve para llamar a una frase de la tabla
+        (async () => { // esta es una función anonima
+            // Este código sirve para llamar a una frase de la tabla en supabase
+            const response = await namuClient.from("tarea3").select("top")
+            console.log(response.data[0].top)
+            
+            document.getElementById("top1").innerHTML = response.data[0].top;
+            document.getElementById("top2").innerHTML = response.data[1].top;
+            document.getElementById("top3").innerHTML = response.data[2].top;
+            document.getElementById("top4").innerHTML = response.data[3].top;
+            document.getElementById("top5").innerHTML = response.data[4].top;
+            document.getElementById("top6").innerHTML = response.data[5].top;
+            document.getElementById("top7").innerHTML = response.data[6].top;
+            document.getElementById("top8").innerHTML = response.data[7].top;
+            document.getElementById("top9").innerHTML = response.data[8].top;
+            document.getElementById("top10").innerHTML = response.data[9].top;
+
+            const response2 = await namuClient.from("tarea3").select("nomCancion")
+            console.log(response2.data[0].nomCancion)
+
+            document.getElementById("nomC1").innerHTML = response2.data[0].nomCancion;
+            document.getElementById("nomC2").innerHTML = response2.data[1].nomCancion;
+            document.getElementById("nomC3").innerHTML = response2.data[2].nomCancion;
+            document.getElementById("nomC4").innerHTML = response2.data[3].nomCancion;
+            document.getElementById("nomC5").innerHTML = response2.data[4].nomCancion;
+            document.getElementById("nomC6").innerHTML = response2.data[5].nomCancion;
+            document.getElementById("nomC7").innerHTML = response2.data[6].nomCancion;
+            document.getElementById("nomC8").innerHTML = response2.data[7].nomCancion;
+            document.getElementById("nomC9").innerHTML = response2.data[8].nomCancion;
+            document.getElementById("nomC10").innerHTML = response2.data[9].nomCancion;
+        })()
+
+    </script>
+</body>
+</html>
